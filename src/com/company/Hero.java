@@ -30,10 +30,11 @@ public abstract class Hero implements IHavingSuperAbility {
     }
 
     public Hero(int health, int damage, String superAbility) {
+        this.health = health;
+        this.damage = damage;
+        this.superAbility = superAbility;
     }
 
-    public Hero() {
 
-    }
 }
 

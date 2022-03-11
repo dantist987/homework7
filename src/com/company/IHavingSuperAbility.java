@@ -1,6 +1,9 @@
 package com.company;
 
 public interface IHavingSuperAbility {
-    abstract void useSuperAbility(Hero[] heroes);
+
+    void applySuperAbility(Hero[] heroes, Boss boss);
+
+
 }
 

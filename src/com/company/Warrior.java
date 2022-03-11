@@ -1,17 +1,29 @@
 package com.company;
 
 
-public class Warrior extends Hero implements IHavingSuperAbility {
+import java.util.Random;
+
+public class Warrior extends Hero {
+
+
     public Warrior(int health, int damage, String superAbility) {
         super(health, damage, superAbility);
+
     }
 
-    public Warrior() {
-    }
 
     @Override
-    public void useSuperAbility(Hero[] heroes) {
-        System.out.println("Warrior used CRITICAL DAMAGE ability!");
-
+    public void applySuperAbility(Hero[] heroes, Boss boss) {
+        criticalStrike();
+        System.out.println("Warrior used " + getSuperAbility());
     }
+
+    public void criticalStrike() {
+        int newDamage = getDamage() * new Random().nextInt(1, 4);
+        setDamage(newDamage);
+    }
+
+
 }
+
+
